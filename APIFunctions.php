@@ -1,7 +1,7 @@
 <?php
 class ApiFunctions{
 
-    private $url = "https://messageapp-91ff0.firebaseio.com/users";
+    private $url = "https://storagecloudassignment.firebaseio.com/users";
 
     public function get(){
         $curl = curl_init($this->url.".json");
@@ -10,7 +10,7 @@ class ApiFunctions{
         $response = json_decode(curl_exec($curl));
         curl_close($curl);
         return $response;
-    }
+    } 
     public function post($data){
         $curl = curl_init($this->url.".json");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
